@@ -37,10 +37,10 @@ gulp.task("serve", ["build"], function() {
       index: "index.html"
     }
   });
-  gulp.watch(["js/*.js"], ["jsBuild"]);
+  gulp.watch(["content/js/*.js"], ["jsBuild"]);
   gulp.watch(["bower.json"], ["bowerBuild"]);
   gulp.watch(["*.html"], ["htmlBuild"]);
-  gulp.watch(["scss/*.scss"], ["cssBuild"]);
+  gulp.watch(["content/scss/*.scss"], ["cssBuild"]);
 });
 
 gulp.task("concatInterface", function() {
@@ -96,7 +96,7 @@ gulp.task("bowerCSS", function() {
 })
 
 gulp.task("cssBuild", function() {
-  return gulp.src(["scss/*.scss"])
+  return gulp.src(["content/scss/*.scss"])
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())

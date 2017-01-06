@@ -1,3 +1,5 @@
+//var apiKey = require('./../.env').apiKey;
+
 $('document').ready(function() {
-  // Comment so empty file will push to github
+  console.log("Test");
 });
