@@ -1,6 +1,24 @@
+//palette
+$DARKBLUE: rgb(1, 93, 130);
+$BLUE: rgb(0, 130, 168);
+$LIGHTBLUE: rgb(0, 159, 178);
+$ORANGE: rgb(240, 128, 43);
+$WHITE: rgb(215, 244, 255);
+
 body {
-  background-color: salmon;
+  background-color: $DARKBLUE;
+  color: $WHITE;
   text-align: center;
+}
+
+hr {
+  border-color: $LIGHTBLUE;
+}
+
+.jumbotron {
+  margin-top: 2vh;
+  background-color: $BLUE;
+  color: $ORANGE;
 }
 
 .flex-container {
@@ -24,11 +42,13 @@ body {
     position:absolute;
     right:0;
     top:0;
-    background:linear-gradient(transparent 200px, salmon);
+    background:linear-gradient(transparent 200px, $DARKBLUE);
 }
 
 .profile {
-  border: 3px solid pink;
+  background-color: $BLUE;
+  border: 3px double $ORANGE;
+  box-shadow: 1px 1px black;
   text-align: center;
   height: 300px;
   position: relative;
