@@ -22,14 +22,13 @@ var displayDoctors = function(array) {
   for (var i = 0; i < array.length; i++) {
     var profile = array[i].profile;
     var practice = array[i].practices[0];
+    var name = profile.first_name + " " + profile.last_name + ", " + profile.title;
     $('#searchResults').append(
       "<div class='profile'>" +
         "<div class='left'>" +
           "<img src='" + profile.image_url + "'>" + " " + "<br>" +
-            "<span>" + profile.first_name + " " +
-                       profile.last_name + ", " +
-                       profile.title + " " + "</span><hr>" +
-            "<p>" + practice.name + "<br>" +
+            "<span>" + name + "</span><hr>" +
+            "<p>" + checkAddressName(name, practice.name) +
                     practice.visit_address.street + "<br>" +
                     practice.visit_address.city + ", " +
                     practice.visit_address.state + " " +
@@ -51,3 +50,9 @@ var formatPhone = function(string) {
   var telCode = string[6] + string[7] + string[8] + string[9];
   return areaCode + " " + coCode + "-" + telCode;
 };
+
+var checkAddressName = function(name, address) {
+  console.log(name);
+  console.log(address);
+  return (name === address) ? "" : address + "<br>";
+}
