@@ -1,1 +1,5 @@
-// Comment so empty file will push to github
+function Practitioner(name) {
+  this.name = name;
+};
+
+exports.practModule = Practitioner;
