@@ -1,25 +1,73 @@
 //palette
-$DARKBLUE: rgb(1, 93, 130);
-$BLUE: rgb(0, 130, 168);
-$LIGHTBLUE: rgb(0, 159, 178);
-$BIOTEXT: rgb(193, 219, 229);
-$ORANGE: rgb(240, 128, 43);
-$WHITE: rgb(215, 244, 255);
+$BG: rgb(5, 8, 36);
+$DARK: rgb(99, 28, 36);
+$NORMAL: rgb(202, 54, 54);
+$INPUTBG: rgb(68, 98, 98);
+$ACCENT: rgb(98, 138, 138);
+$BIOTEXT: rgb(211, 170, 114);
+$TEXT: rgb(241, 200, 144);
+
+html {
+  height: 100vh;
+  background-color: black;
+}
 
 body {
-  background-color: $DARKBLUE;
-  color: $WHITE;
+  height: 100vh;
+  background-color: $BG;
+  color: $TEXT;
   text-align: center;
 }
 
 hr {
-  border-color: $LIGHTBLUE;
+  border-color: $DARK;
+}
+
+#userCond{
+  label {
+    font-size: 1.4em;
+    font-weight: bolder;
+  }
+  input {
+    background-color: $INPUTBG;
+    color: $BIOTEXT;
+    padding: 5px;
+    font-size: 1.3em;
+    height: 35px;
+    text-shadow: 2px 2px 2px $BG;
+    border: 1px solid black;
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  input:focus {
+    outline: none !important;
+  }
+  button {
+    font-size: 1.3em;
+    height: 35px;
+    color: black;
+  }
+}
+
+#bgimg {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./../../content/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .jumbotron {
   margin-top: 2vh;
-  background-color: $BLUE;
-  color: $ORANGE;
+  padding: 25px;
+  background-color: transparent;
+  color: $ACCENT;
+  h3 {
+    font-size: 2.5em;
+    text-shadow: 3px 3px 3px $BG;
+  }
 }
 
 .flex-container {
@@ -33,7 +81,6 @@ hr {
 
 .row {
   width: auto;
-  // border: 1px solid blue;
 }
 
 .right:before {
@@ -43,12 +90,12 @@ hr {
     position:absolute;
     right:0;
     top:0;
-    background:linear-gradient(transparent 250px, $DARKBLUE);
+    background:linear-gradient(transparent 250px, $BG);
 }
 
 .profile {
-  background-color: $BLUE;
-  border: 3px double $ORANGE;
+  background-color: $DARK;
+  border: 4px double $ACCENT;
   box-shadow: 1px 1px black;
   text-align: center;
   height: 300px;
@@ -69,12 +116,14 @@ hr {
   }
   .left {
     // border: 1px solid green;
-    box-shadow: 10px 0 5px -5px $DARKBLUE;
+    background-color: $ACCENT;
+    box-shadow: 10px 0 5px -5px $BG;
     height: 300px;
     width: 20%;
     padding: 5px;
     float: left;
     span {
+      text-shadow: 1px 1px 1px $BG;
       font-size: 1.2em;
     }
   }

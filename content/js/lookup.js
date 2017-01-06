@@ -1,7 +1,7 @@
 var apiKey = require('./../../.env').apiKey;
 var getPractitioners = require('./../../.env').getDoctors;
 
-const MAXRESULTS = 5;
+const MAXRESULTS = 20;
 
 function Practitioner() {
   // this.fName = first;
