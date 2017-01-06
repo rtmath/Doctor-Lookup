@@ -2,6 +2,7 @@
 $DARKBLUE: rgb(1, 93, 130);
 $BLUE: rgb(0, 130, 168);
 $LIGHTBLUE: rgb(0, 159, 178);
+$BIOTEXT: rgb(193, 219, 229);
 $ORANGE: rgb(240, 128, 43);
 $WHITE: rgb(215, 244, 255);
 
@@ -42,7 +43,7 @@ hr {
     position:absolute;
     right:0;
     top:0;
-    background:linear-gradient(transparent 200px, $DARKBLUE);
+    background:linear-gradient(transparent 250px, $DARKBLUE);
 }
 
 .profile {
@@ -68,16 +69,23 @@ hr {
   }
   .left {
     // border: 1px solid green;
+    box-shadow: 10px 0 5px -5px $DARKBLUE;
     height: 300px;
     width: 20%;
     padding: 5px;
     float: left;
+    span {
+      font-size: 1.2em;
+    }
   }
   .right {
     margin-left: 3%;
+    color: $BIOTEXT;
     text-align: left;
     width: 77%;
+    padding: 5px;
     // border: 1px solid red;
     float: left;
+
   }
 }
