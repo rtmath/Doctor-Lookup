@@ -10,20 +10,11 @@ $('document').ready(function() {
     Practitioner.getAll(condition, docs);
 
     setTimeout(function() {
-      console.log("Length after getAll: " + docs.length);
-      console.log(docs);
-    }, 1500);
-
-    setTimeout(function() {
-      console.log("Length before displayDoctors: " + docs.length);
       if (typeof docs[0] != 'undefined') {
         displayDoctors(docs);
       } else {
         $('#searchResults').text("I'm sorry, we could not find any doctors based on your search terms. Please revise your search.");
       }
-    }, 2000);
-    setTimeout(function() {
-
     }, 2000);
   });
 });
